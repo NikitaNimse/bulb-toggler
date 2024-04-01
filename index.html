@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb toggler</title>
+    <style>
+        body{
+               background-color: #8EC5FC;
+        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        min-height:100vh;
+   
+           }
+           .app-title{
+            text-align:center;
+           }
+           .bulb-container{
+          background-color:#FFFF;
+          width:400px;
+          margin:10px auto;
+          display:flex;
+          justify-content: center;
+          padding:20px;
+          border-radius:10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+           }
+           .bulb-img{
+            height:250px;
+           }
+           @media screen and (max-width:600px){
+
+         .bulb-container{
+            width:80%;
+           }
+           .bulb-img{
+            height:150px;
+           }
+        }
+        .btn-container{
+            text-align:center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-toggle{
+            font-size: 20px;
+            padding:5px 20px;
+            border-radius:15px;
+            border:none;
+            margin: 0 20px;
+            cursor:pointer;
+            color: #FFFF;
+        }
+        .btn-toggle :hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+        }
+        .btn-on{
+         background-color: darkgreen;
+        }
+        .btn-off{
+            background-color: red;
+        }
+        </style>
+</head>
+<body>
+     <h1 class="app-title"> Bulb toggler</h1>
+    <div class="bulb-container">
+     <img src= ".\lightbulb (1).png "  class="bulb-img" id="bulb"/>
+    </div> 
+    <div class="btn-container">
+    <button class="btn-toggle btn-on" onclick="turnOn()">
+         On
+        </button>
+     <button class="btn-toggle btn-off" onclick="turnoff()">
+         Off
+        </button>
+    </div>
+    <script>
+        function turnOn(){
+            const bulbelement=document.getElementById('bulb');
+            bulbelement.src="\lightbulb.png";
+        }
+
+        function turnoff(){
+            const bulbelement=document.getElementById('bulb');
+            bulbelement.src="\lightbulb (1).png";
+        }
+    </script>
+         <!-- <script> 
+             function togglebulb(state){
+                const bulbelement=document.getElementById('bulb');
+                if(state='On')
+                {
+                    bulbelement.src="\lightbulb.png";
+                }
+                else
+                {
+                    bulbelement.src="\lightbulb (1).png";
+                }
+            }
+           
+        </script>-->
+ 
+</body>
+</html>
